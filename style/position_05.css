@@ -1,0 +1,24 @@
+.container {
+    display: flex;
+}
+
+.card {
+    display: flex;
+    position: relative;
+    border: 1px solid #000;
+    padding: 5px;
+}
+
+.badge {
+    position: absolute;
+    background-color: red;
+    color: white;
+    padding: 5px;
+}
+
+button {
+    position: absolute;
+    bottom : 0;
+    right: 0;;
+    margin: 5px;
+}

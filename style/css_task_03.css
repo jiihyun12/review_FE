@@ -1,0 +1,17 @@
+.card {
+    background-color: #fff;
+    border: 1px solid gray;
+}
+
+.card h3 {
+    color : #003366;
+}
+
+.card p {
+    color : #333;
+}
+
+.card a {
+    color : orange;
+    text-decoration : none;
+}

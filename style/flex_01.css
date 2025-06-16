@@ -1,0 +1,21 @@
+.container {
+    display: flex;
+    flex-wrap: wrap; /* 기본은 가로 정렬, 공간이 부족하면 자동으로 줄 바뀌기 */
+    gap: 100px; /* gap은 부모한테 줘야함 */
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    justify-content: center; 
+    text-align: center;
+    background-color: #f0f0f0;
+    border: 1px solid;
+    padding: 10px;
+    width: 30%;
+}
+
+/* flex-direction: column;일 때, 
+세로 가운데 정렬은 justify-content: center;,
+가로 가운데 정렬은 align-items: center; 
+또는 text-align: center; */

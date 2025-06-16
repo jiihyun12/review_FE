@@ -1,0 +1,22 @@
+.container {
+    display: flex;
+}
+
+.card {
+    background-color: wheat;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start; /* 왼쪽 정렬 */ 
+    width: 25%;
+    position: relative; /*기준! */
+    gap: 10px;
+}
+
+.badge {
+    background-color: purple;
+    position: absolute;
+    color: white;
+    padding: 5px;
+    top: 5px;
+    right: 5px;
+}

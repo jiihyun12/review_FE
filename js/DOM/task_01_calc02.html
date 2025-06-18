@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>calc02</title>
+</head>
+<body>
+    <div class="container">
+        <div class="button">
+            <button class="plus-btn">+ 1</button>
+            <span class="num">0</span>
+            <button class="minus-btn">- 1</button>
+        </div>
+    </div>
+</body>
+<script>
+    const add = document.querySelector(".plus-btn");
+    const sub = document.querySelector(".minus-btn");
+    const num = document.querySelector(".num");
+    
+    let count = 0;
+    add.addEventListener("click", () => {
+        if(count < 10){
+            count++;
+            num.innerHTML = count; // innerText쓰는게 좋음 innerHTML은 HTML구조까지 바꿀 수 있어서 보안상 위험할 때도 있음
+        }
+    })
+    sub.addEventListener("click", ()=>{
+        if(count > 0) {
+            count--;
+            num.innerHTML = count;
+        }
+    })
+
+    // 버튼 비활성화
+    // if(count >= 10) add.disabled = true;
+    // if(count <= 0) sub.disabled = true;
+
+</script>
+</html>

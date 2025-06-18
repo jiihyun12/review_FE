@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>input 02</title>
+</head>
+<body>
+    <div class="container">
+        <input class="input-num" placeholder="숫자를 입력하세요" />
+        <div class="btn-wrapper">
+            <button class="add-num">+</button>
+            <span class="num">0</span>
+            <button class="sub-num">-</button>
+        </div>
+    </div>
+</body>
+<script>
+    const input = document.querySelector(".input-num"); // 입력 값
+    const addBtn = document.querySelector(".add-num"); // +
+    const subBtn = document.querySelector(".sub-num"); // -
+    const inputNum = document.querySelector(".num"); // 결과 출력용
+
+    let count = 0;
+    addBtn.addEventListener("click", () => {
+        const value = Number(input.value); // input.value 사용자 입력값( 항상 string ) 따라서 숫자로 변환
+        if(value != Number(value)) {
+            alert("숫자를 입력하세요")
+        }
+        count += value;
+        inputNum.innerText = count;
+    })
+    subBtn.addEventListener("click", () => {
+        const value = Number(input.value)
+        if(isNaN(value)){
+            alert("숫자를 입력하세요")
+        }
+        if(count > 0){
+            count -= value;
+            inputNum.innerText = count;
+        }
+    })
+    
+</script>
+</html>

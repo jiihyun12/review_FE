@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>input</title>
+</head>
+<body>
+    <div>
+        <div>
+            <input class="input-num" placeholder="숫자를 입력하세요" />
+            <button class="input-btn">입력</button>
+            <span class="span">영역</span>
+        </div>
+    </div>
+</body>
+<script>
+    const inputNum = document.querySelector(".input-num");
+    const inputBtn = document.querySelector(".input-btn");
+    const span = document.querySelector(".span");
+
+    inputBtn.addEventListener("click", () => {
+        const inputVal = Number(inputNum.value);
+        if(isNaN(inputVal)){
+            alert("숫자를 입력해주세요")
+        }
+        if(inputVal >= 10){
+            span.style.backgroundColor = "red";
+        }else if(inputVal < 10){
+            span.style.backgroundColor = "black";
+            span.style.color = "white";
+        }
+    })
+</script>
+</html>

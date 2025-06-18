@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>input</title>
+</head>
+<body>
+    <div class="container">
+        <input class="input" placeholder="이름을 입력하세요"/>
+        <button class="btn">출력</button>
+        <p class="p-tag"></p>
+    </div>
+</body>
+<script>
+    const input = document.querySelector(".input");
+    const btn = document.querySelector(".btn");
+    const p = document.querySelector(".p-tag");
+
+    btn.addEventListener("click", () => {
+        const name = input.value; // 입력된 이름 값 가져오기 // input.value = 그 안에 적은 글자
+
+        if(name === ""){ // 아무것도 입력 안 했을 때
+            p.innerText = "이름을 입력해주세요"
+        } else { // 이름이 입력된 경우
+            p.innerText = `${name}님 반갑습니다.`
+        }
+        
+    })
+</script>
+</html>

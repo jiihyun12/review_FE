@@ -1,0 +1,42 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+}
+
+.card {
+    position: relative;
+    border: 1px solid black;
+    width: 400px;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    
+}
+
+.like-icon {
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
+.img-cat {
+    position: relative;
+}
+
+.overlay-text {
+    position: absolute;
+    top: 5px;
+    color: black;
+    background-color: (0, 0, 0, 0.5);
+}
+
+button {
+    position: absolute;
+    bottom: 0px;
+    right: 0;
+    margin: 5px;
+}

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>calc</title>
+</head>
+<body>
+    <div class="container">
+        <button class="plus-btn">+1</button>
+        <span>0</span>
+        <button class="minus-btn">-1</button>
+    </div>
+</body>
+<script>
+    const plus = document.querySelector(".plus-btn");
+    const minus = document.querySelector(".minus-btn");
+    const num = document.querySelector("span");
+    // console.log(plus)
+    // console.log(minus)
+
+    let count = 0;
+    plus.addEventListener("click", () => {
+        count++
+        num.innerText = count; // HTML에 있는 태그 안의 글씨를 count 변수의 값으로 바꿔줘
+    }) 
+    minus.addEventListener("click", () => {
+        if(count > 0){
+            count--;
+            num.innerText = count;
+        }
+    })
+
+    
+</script>
+</html>

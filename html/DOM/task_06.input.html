@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>input 05</title>
+</head>
+<style>
+    .odd {
+        background-color: red;
+    }
+    .even {
+        background-color: blue;
+    }
+</style>
+<body>
+    <div>
+        <input class="input" placeholder="숫자를 입력하세요" />
+        <button class="btn">입력</button>
+        <span class="span">출력</span>
+    </div>
+</body>
+    <script>
+        const input = document.querySelector(".input");
+        const btn = document.querySelector(".btn");
+        const span = document.querySelector(".span");
+
+        btn.addEventListener("click", () => {
+            const inputNum = Number(input.value);
+
+            if(isNaN(inputNum)){
+                alert("숫자를 입력해주세요")
+            }
+
+            span.classList.remove("odd", "even");
+            
+            if(inputNum % 2 == 0){
+                span.classList.add("even")
+            } else if(inputNum % 2 != 0 ){
+                span.classList.add("odd")
+            }
+            
+        })
+    </script>
+</html>
+
+<!-- classList
+add 추가
+remove 제거
+toggle 없으면 추가, 있으면 제거 -->

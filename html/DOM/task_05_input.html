@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>input 04</title>
+</head>
+<body>
+    <div>
+        <input class="input" placeholder="숫자를 입력하세요" />
+        <button class="btn">입력</button>
+        <span class="span">배경 영역</span>
+    </div>
+</body>
+<script>
+    const input = document.querySelector(".input");
+    const btn = document.querySelector(".btn");
+    const span = document.querySelector(".span");
+
+    btn.addEventListener("click", () => {
+        const inputNum = Number(input.value);
+        span.style.backgroundColor = inputNum % 2 == 0 ? "blue" : "yellow";
+    })
+</script>
+</html>

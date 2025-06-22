@@ -1,0 +1,11 @@
+#container {
+    display: wrap;
+}
+
+.card {
+    background-color: pink;
+    width: 30%;
+    height: 10%;
+    display: flex;
+    margin: 10px;
+}
